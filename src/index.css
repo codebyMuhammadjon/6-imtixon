@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #3D3D3D;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #46A358;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3D8B4A;
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background: #46A358 !important;
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+/* Mobile touch improvements */
+.touch-pan-y {
+  touch-action: pan-y;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Smooth transitions */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mobile-friendly inputs */
+input, button, select, textarea {
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Hide scrollbar for mobile carousel */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
